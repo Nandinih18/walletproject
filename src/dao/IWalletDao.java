@@ -10,6 +10,7 @@ public interface IWalletDao {
 	
 	Wallet findByMobileno(String mobileno);
 	
+	public void transferAmount(Wallet sender, Wallet receiver,double amount);
 	
 	Set<Wallet> allCustomers();
 

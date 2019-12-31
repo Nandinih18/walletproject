@@ -17,6 +17,11 @@ public class CustomerServiceImpl implements ICustomerService {
     public void addCustomer(Wallet w) {
         dao.addCustomer(w);
     }
+	
+	@Override
+	public void transferAmount(Wallet sender, Wallet receiver,double amount) {
+	dao.transferAmount(sender,receiver,amount);
+	}
 
 	
 	@Override

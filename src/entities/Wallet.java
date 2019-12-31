@@ -37,6 +37,10 @@ public class Wallet {
 		this.balance = balance;
 	}
 	
+	public void addAmount(double amount) {
+		balance=balance+amount;
+	}
+	
 	
 	 @Override
 	 public boolean equals(Object obj) {

@@ -29,5 +29,16 @@ public class WalletDaoImpl implements IWalletDao {
 		Set<Wallet> customerSet = new HashSet<>(customers);
 		return customerSet;
 	}
+	
+	public void transferAmount(Wallet sender, Wallet receiver,double amount) {
+		if(sender.getBalance()>amount) {
+		receiver.addAmount(amount);
+		sender.addAmount(0-amount);
+		}
+		else
+		{
+			System.out.println("Insufficient Balance");
+		}
 
+	}
 }
